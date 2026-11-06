@@ -1,14 +1,20 @@
-This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma/seed.ts, api/src/prisma/prisma.service.ts and api/.env.example.
+- [schema.prisma](https://github.com/keishaochieng/library-management-system/blob/main/api/prisma/schema.prisma)
+- [seed.ts](https://github.com/keishaochieng/library-management-system/blob/main/api/prisma/seed.ts)
+- [prisma.service.ts](https://github.com/keishaochieng/library-management-system/blob/main/api/src/prisma/prisma.service.ts)
+- [.env.example](https://github.com/keishaochieng/library-management-system/blob/main/api/.env.example)
 
 ## Required Files (for reviewers)
 
-| Requirement | Path |
+| Requirement | File |
 |---|---|
-| Prisma schema (Role enum, User, Genre, Book, Review) | `api/prisma/schema.prisma` |
-| Seed script (4 genres, 16 books) | `api/prisma/seed.ts` |
-| Prisma service (extends PrismaClient, OnModuleInit, `$connect()`) | `api/src/prisma/prisma.service.ts` |
-| Env placeholder | `api/.env.example` |
-| Migration | `api/prisma/migrations/20261102033111_init/migration.sql` |
+| Prisma schema (Role enum, User, Genre, Book, Review) | [api/prisma/schema.prisma](api/prisma/schema.prisma) |
+| Seed script (4 genres, 16 books) | [api/prisma/seed.ts](api/prisma/seed.ts) |
+| Prisma service (extends PrismaClient, OnModuleInit, `$connect()`) | [api/src/prisma/prisma.service.ts](api/src/prisma/prisma.service.ts) |
+| Env placeholder | [api/.env.example](api/.env.example) |
+| Migration | [api/prisma/migrations/20261102033111_init/migration.sql](api/prisma/migrations/20261102033111_init/migration.sql) |
+
+This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma/seed.ts, api/src/prisma/prisma.service.ts and api/.env.example.
+
 
 # Library Management System
 

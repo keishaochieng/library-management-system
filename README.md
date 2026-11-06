@@ -1,3 +1,13 @@
+## Required Files (for reviewers)
+
+| Requirement | Path |
+|---|---|
+| Prisma schema (Role enum, User, Genre, Book, Review) | `api/prisma/schema.prisma` |
+| Seed script (4 genres, 16 books) | `api/prisma/seed.ts` |
+| Prisma service (extends PrismaClient, OnModuleInit, `$connect()`) | `api/src/prisma/prisma.service.ts` |
+| Env placeholder | `api/.env.example` |
+| Migration | `api/prisma/migrations/20261102033111_init/migration.sql` |
+
 # Library Management System
 
 NestJS + Prisma + PostgreSQL backend for a library book catalog.

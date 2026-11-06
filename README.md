@@ -15,6 +15,7 @@
 
 This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma/seed.ts, api/src/prisma/prisma.service.ts and api/.env.example.
 
+> Copies of the four key files also sit at the repo root for easy viewing. The working originals are in `api/` at the paths above.
 
 # Library Management System
 

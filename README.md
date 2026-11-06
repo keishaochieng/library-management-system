@@ -1,3 +1,5 @@
+This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma/seed.ts, api/src/prisma/prisma.service.ts and api/.env.example.
+
 ## Required Files (for reviewers)
 
 | Requirement | Path |

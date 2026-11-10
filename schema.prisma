@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -17,6 +16,7 @@ model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
   name      String
+  password  String   // NEW: bcrypt hash
   role      Role     @default(PATRON)
   createdAt DateTime @default(now())
 
@@ -34,6 +34,8 @@ model Book {
   id              Int      @id @default(autoincrement())
   title           String
   author          String
+  isbn            String   @unique // NEW
+  totalCopies     Int      // NEW
   publishedYear   Int?
   copiesAvailable Int      @default(1)
   createdAt       DateTime @default(now())

@@ -319,3 +319,6 @@ ALTER TABLE "Review" ADD CONSTRAINT "Review_bookId_fkey" FOREIGN KEY ("bookId") 
 -- AddForeignKey
 ALTER TABLE "Review" ADD CONSTRAINT "Review_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 ```
+
+## Assignment files
+Copies of the graded files are at the repo root for review. The originals are in api/src (genres, books, auth, users, main.ts). The Postman collection is docs/postman_collection.json.

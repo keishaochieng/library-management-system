@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f8;
+  color: #1f2937;
+}
+a { color: inherit; text-decoration: none; }
+
+.site-header { background: #1f3a5f; padding: 14px 20px; }
+.logo { color: #fff; font-weight: bold; font-size: 1.2rem; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.search { flex: 1 1 240px; }
+.controls input, .controls select {
+  padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px;
+  font-size: 1rem; background: #fff;
+}
+
+/* Responsive grid: as many 220px+ columns as fit */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.card {
+  display: block; background: #fff; border-radius: 8px; padding: 16px;
+  border: 1px solid #e5e7eb; transition: box-shadow 0.15s;
+}
+a.card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.author { margin: 0 0 10px; color: #6b7280; }
+.tag { display: inline-block; background: #e0e7ff; color: #3730a3; font-size: 0.8rem; padding: 2px 8px; border-radius: 999px; }
+.avail { margin: 10px 0 0; font-size: 0.9rem; font-weight: bold; }
+.avail.yes { color: #15803d; }
+.avail.no { color: #b91c1c; }
+
+.state { padding: 30px; text-align: center; color: #6b7280; }
+.state.error { color: #b91c1c; }
+
+.skeleton .sk-line { height: 14px; margin-bottom: 12px; border-radius: 4px; background: #e5e7eb; animation: pulse 1.2s ease-in-out infinite; }
+.sk-line.wide { width: 90%; height: 18px; }
+.sk-line.short { width: 40%; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.back { display: inline-block; margin-bottom: 16px; color: #1f3a5f; }
+.detail { background: #fff; padding: 24px; border-radius: 8px; border: 1px solid #e5e7eb; }
+.detail h1 { margin-top: 0; }
+.detail dl { display: grid; grid-template-columns: 120px 1fr; gap: 8px 12px; }
+.detail dt { font-weight: bold; color: #6b7280; }
+.detail dd { margin: 0; }

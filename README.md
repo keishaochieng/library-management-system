@@ -17,6 +17,35 @@ This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma
 
 > Copies of the four key files also sit at the repo root for easy viewing. The working originals are in `api/` at the paths above.
 
+## Required Files: Book API, Auth & Authorization
+
+| Requirement | File |
+|---|---|
+| Genre CRUD (controller, service, module) | [api/src/genres/genres.controller.ts](api/src/genres/genres.controller.ts), [genres.service.ts](api/src/genres/genres.service.ts), [genres.module.ts](api/src/genres/genres.module.ts) |
+| Book DTO validation | [api/src/books/dto/create-book.dto.ts](api/src/books/dto/create-book.dto.ts) |
+| Books controller (query filters, guarded routes) | [api/src/books/books.controller.ts](api/src/books/books.controller.ts) |
+| Books service (where clause, skip/take) | [api/src/books/books.service.ts](api/src/books/books.service.ts) |
+| Register and login, bcrypt | [api/src/auth/auth.controller.ts](api/src/auth/auth.controller.ts), [auth.service.ts](api/src/auth/auth.service.ts), [auth.module.ts](api/src/auth/auth.module.ts) |
+| JWT strategy and guard | [api/src/auth/jwt.strategy.ts](api/src/auth/jwt.strategy.ts), [jwt-auth.guard.ts](api/src/auth/jwt-auth.guard.ts) |
+| Roles decorator and RolesGuard | [api/src/auth/roles.decorator.ts](api/src/auth/roles.decorator.ts), [roles.guard.ts](api/src/auth/roles.guard.ts) |
+| Global ValidationPipe and CORS | [api/src/main.ts](api/src/main.ts) |
+| Postman collection | [docs/postman_collection.json](docs/postman_collection.json) |
+| Stretch: GET /users/profile | [api/src/users/users.controller.ts](api/src/users/users.controller.ts) |
+
+## Required Files: Library Catalog & Search (React client)
+
+| Requirement | File |
+|---|---|
+| BrowserRouter wrapping App | [client/src/main.jsx](client/src/main.jsx) |
+| Routes for / and /books/:id | [client/src/App.jsx](client/src/App.jsx) |
+| Home page (filter state, genre filter) | [client/src/pages/HomePage.jsx](client/src/pages/HomePage.jsx) |
+| Book grid (fetch, loading, error, empty states) | [client/src/components/BookGrid.jsx](client/src/components/BookGrid.jsx) |
+| Book card | [client/src/components/BookCard.jsx](client/src/components/BookCard.jsx) |
+| Debounced search bar | [client/src/components/SearchBar.jsx](client/src/components/SearchBar.jsx) |
+| Book detail page | [client/src/pages/BookDetail.jsx](client/src/pages/BookDetail.jsx) |
+| VITE_API_URL | [client/.env](client/.env) |
+| Stretch: sort control and skeleton loading | HomePage.jsx and BookGrid.jsx |
+
 # Library Management System
 
 NestJS + Prisma + PostgreSQL backend for a library book catalog.

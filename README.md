@@ -46,6 +46,18 @@ This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma
 | VITE_API_URL | [client/.env](client/.env) |
 | Stretch: sort control and skeleton loading | HomePage.jsx and BookGrid.jsx |
 
+## Reading List, Auth Flow & Space Booking Form (Week 4)
+
+| File | What it contains |
+|------|------------------|
+| `client/src/context/ReadingListContext.jsx` | A reducer handling ADD_BOOK / REMOVE_BOOK / CLEAR_LIST, saved to and restored from localStorage |
+| `client/src/App.jsx` | Wraps its routes in `<ReadingListProvider>` |
+| `client/src/pages/LoginPage.jsx` | Controlled form posting to `/auth/login`, stores the returned JWT in localStorage |
+| `client/src/pages/RegisterPage.jsx` | Controlled form posting to `/auth/register` |
+| `client/src/components/ProtectedRoute.jsx` | Redirects to `/login` when there is no token, otherwise renders its children |
+| `client/src/pages/SpaceBookingPage.jsx` | Controlled form with a space dropdown and date / start time / end time inputs |
+| `client/src/components/Navbar.jsx` | Shows the current reading list count from ReadingListContext |
+
 # Library Management System
 
 NestJS + Prisma + PostgreSQL backend for a library book catalog.

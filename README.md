@@ -48,15 +48,17 @@ This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma
 
 ## Reading List, Auth Flow & Space Booking Form (Week 4)
 
+## Reading List, Auth Flow & Space Booking Form (Week 4)
+
 | File | What it contains |
 |------|------------------|
-| `client/src/context/ReadingListContext.jsx` | A reducer handling ADD_BOOK / REMOVE_BOOK / CLEAR_LIST, saved to and restored from localStorage |
-| `client/src/App.jsx` | Wraps its routes in `<ReadingListProvider>` |
-| `client/src/pages/LoginPage.jsx` | Controlled form posting to `/auth/login`, stores the returned JWT in localStorage |
-| `client/src/pages/RegisterPage.jsx` | Controlled form posting to `/auth/register` |
-| `client/src/components/ProtectedRoute.jsx` | Redirects to `/login` when there is no token, otherwise renders its children |
-| `client/src/pages/SpaceBookingPage.jsx` | Controlled form with a space dropdown and date / start time / end time inputs |
-| `client/src/components/Navbar.jsx` | Shows the current reading list count from ReadingListContext |
+| [`client/src/context/ReadingListContext.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/context/ReadingListContext.jsx) | A reducer handling ADD_BOOK / REMOVE_BOOK / CLEAR_LIST, saved to and restored from localStorage |
+| [`client/src/App.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/App.jsx) | Wraps its routes in `<ReadingListProvider>` |
+| [`client/src/pages/LoginPage.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/pages/LoginPage.jsx) | Controlled form posting to `/auth/login`, stores the returned JWT in localStorage |
+| [`client/src/pages/RegisterPage.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/pages/RegisterPage.jsx) | Controlled form posting to `/auth/register` |
+| [`client/src/components/ProtectedRoute.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/components/ProtectedRoute.jsx) | Redirects to `/login` when there is no token, otherwise renders its children |
+| [`client/src/pages/SpaceBookingPage.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/pages/SpaceBookingPage.jsx) | Controlled form with a space dropdown and date / start time / end time inputs |
+| [`client/src/components/Navbar.jsx`](https://github.com/keishaochieng/library-management-system/blob/main/client/src/components/Navbar.jsx) | Shows the current reading list count from ReadingListContext |
 
 # Library Management System
 
@@ -361,5 +363,3 @@ ALTER TABLE "Review" ADD CONSTRAINT "Review_bookId_fkey" FOREIGN KEY ("bookId") 
 ALTER TABLE "Review" ADD CONSTRAINT "Review_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 ```
 
-## Assignment files
-Copies of the graded files are at the repo root for review. The originals are in api/src (genres, books, auth, users, main.ts). The Postman collection is docs/postman_collection.json.

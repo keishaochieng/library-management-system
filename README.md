@@ -44,9 +44,7 @@ This repo’s data layer lives in api/: see api/prisma/schema.prisma, api/prisma
 | Debounced search bar | [client/src/components/SearchBar.jsx](client/src/components/SearchBar.jsx) |
 | Book detail page | [client/src/pages/BookDetail.jsx](client/src/pages/BookDetail.jsx) |
 | VITE_API_URL | [client/.env](client/.env) |
-| Stretch: sort control and skeleton loading | HomePage.jsx and BookGrid.jsx |
-
-## Reading List, Auth Flow & Space Booking Form (Week 4)
+| Stretch: sort control and skeleton loading | HomePage.jsx and BookGrid.jsx
 
 ## Reading List, Auth Flow & Space Booking Form (Week 4)
 
